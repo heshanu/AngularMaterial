@@ -3,7 +3,7 @@
     <mat-nav-list (click)="sidenav.close()">
       <a mat-list-item href="" routerLink="/">
         <mat-icon>library_books</mat-icon>
-        <span>courses</span>
+        <span>Courses</span>
       </a>
 
       <a mat-list-item href="" routerLink="about">
@@ -28,6 +28,12 @@
       <mat-icon>menu</mat-icon>
     </button>
 
+    <a mat-icon-button [matMenuTriggerFor]="dropdown">Screens</a>
+    <mat-menu #dropdown>
+      <button mat-menu-item routerLink="/">Courses</button>
+      <button mat-menu-item routerLink="/about">About</button>
+    </mat-menu>
+
     <a mat-button>
       <mat-icon>person_add</mat-icon>
       Register
@@ -39,5 +45,5 @@
     </a>
   </mat-toolbar>
 
-  <router-outlet></router-outlet>
 </mat-sidenav-container>
+<router-outlet></router-outlet>
